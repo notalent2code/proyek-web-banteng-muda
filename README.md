@@ -1,14 +1,14 @@
 <!-- Logo Proyek -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="https://via.placeholder.com/80/FFFFFF/808080?text=Logo" alt="Logo" width="80" height="80">
+  <a href="https://github.com/praktikum-tiunpad-2021/proyek-web-banteng-muda">
+    <img src="/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Judul Proyek</h3>
+  <h3 align="center">Koperasi Simpan Pinjam</h3>
 
   <p align="center">
-    Deskripsi Proyek
+    Cooperativ merupakan website Koperasi Simpan Pinjam yang menawarkan pelayanan berupa simpanan dan pinjaman yang memberikan untuk seseorang yang telah terdaftar menjadi anggota koperasi.
   </p>
 </p>
 
@@ -27,21 +27,23 @@
 
 <!-- Anggota Tim -->
 ## Anggota Tim
-| NPM           | Name        |
-| ------------- |-------------|
-| 140810xx00xx  | John Doe    |
-| 140810xx00xx  | Jane Doe    |
-| 140810xx00xx  | Janie Doe   |
+| NPM           | Name                       |
+| ------------- |----------------------------|
+| 140810200013  | Rihlan Lumenda Suherman    |
+| 140810200025  | Raihan Fadhlal Aziz        |
+| 140810200039  | Rifqy Kurnia Sudarman      |
 
 <!-- Fungsi -->
 ## Fungsi
-
-TO;DO
-
+- Menyediakan layanan simpanan yang menguntungkan bagi anggota
+- Menawarkan layanan pinjaman yang mudah dan terpecaya bagi anggota
+- Menjadi tempat interaksi dan diskusi bagi para anggota koperasi 
+- Mengelola dana yang dihimpun oleh para anggota lalu disalurkan kembali
+- Mendorong kegiatan transaksi agar meningkatkan produktivitas anggota
 <!-- Tujuan -->
 ## Tujuan
-
-TO;DO
+- Meningkatkan pendapatan sekaligus kesejahteraan anggota melalui penyaluran dana kredit
+- Meningkatkan stimulus agar timbul keinginan untuk menabung atau meminjam di koperasi
 
 <!-- Target Pengguna -->
 ## Target Pengguna
@@ -53,9 +55,6 @@ TO;DO
 
 TO;DO
 
-Gambar mockup di sini atau [link figma](https://figma.com/).
-
 <!-- Skema Database -->
 ## Skema Database
-
-TO;DO
+<img src="/assets/erd_ksp.png" alt="Skema Database">
