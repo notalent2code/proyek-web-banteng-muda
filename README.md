@@ -8,7 +8,7 @@
   <h3 align="center">Koperasi Simpan Pinjam</h3>
 
   <p align="center">
-    Cooperativ merupakan website Koperasi Simpan Pinjam yang menawarkan pelayanan berupa simpanan dan pinjaman yang memberikan untuk seseorang yang telah terdaftar menjadi anggota koperasi.
+    Cooperativ merupakan website Koperasi Simpan Pinjam yang menawarkan pelayanan berupa simpanan dan pinjaman untuk seseorang yang telah terdaftar menjadi anggota koperasi.
   </p>
 </p>
 
