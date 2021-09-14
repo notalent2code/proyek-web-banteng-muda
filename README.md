@@ -54,8 +54,8 @@
 
 <!-- Mockup Kasar -->
 ## Mockup Kasar
-<img src="/assets/HalDepan.png" alt="Halaman Depan" width="50%" height="50%">
-<img src="/assets/HalDaftar.png" alt="Halaman Daftar" width="50%" height="50%">
+<img src="/assets/HalDepan.PNG" alt="Halaman Depan" width="50%" height="50%">
+<img src="/assets/HalDaftar.PNG" alt="Halaman Daftar" width="50%" height="50%">
 
 <!-- Skema Database -->
 ## Skema Database
