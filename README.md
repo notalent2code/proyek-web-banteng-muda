@@ -8,7 +8,7 @@
   <h3 align="center">Koperasi Simpan Pinjam</h3>
 
   <p align="center">
-    Cooperativ merupakan website Koperasi Simpan Pinjam yang menawarkan pelayanan berupa simpanan dan pinjaman yang memberikan untuk seseorang yang telah terdaftar menjadi anggota koperasi.
+    Cooperativ merupakan website Koperasi Simpan Pinjam yang menawarkan pelayanan berupa simpanan dan pinjaman yang memiliki berbagai kelebihan untuk seseorang yang telah terdaftar secara resmi menjadi anggota koperasi.
   </p>
 </p>
 
@@ -44,11 +44,13 @@
 ## Tujuan
 - Meningkatkan pendapatan sekaligus kesejahteraan anggota melalui penyaluran dana kredit
 - Meningkatkan stimulus agar timbul keinginan untuk menabung atau meminjam di koperasi
+- Menyediakan lingkungan yang suportif untuk anggotanya
 
 <!-- Target Pengguna -->
 ## Target Pengguna
-
-TO;DO
+- Seseorang yang ingin menabung atau melakukan pinjaman
+- Seseorang yang ingin terhindar dari bunga pinjaman yang tinggi
+- Seseorang yang membutuhkan komunitas untuk berkembang
 
 <!-- Mockup Kasar -->
 ## Mockup Kasar
@@ -57,4 +59,4 @@ TO;DO
 
 <!-- Skema Database -->
 ## Skema Database
-<img src="/assets/erd_ksp.png" alt="Skema Database">
+<img src="/assets/erd_ksp.png" alt="Skema Database" width="75%" height="75%">
