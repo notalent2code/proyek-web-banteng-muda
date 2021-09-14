@@ -63,6 +63,12 @@
       <img src="/assets/HalDaftar.PNG" alt="Halaman Daftar">
     </td>
   <tr>
+  <tr>
+    <td width="50%" height="50%">
+      <img src="/assets/HalLogin.PNG" alt="Halaman Login">
+    </td>
+  <tr>
+    
 </table>
 
 <!-- Skema Database -->
