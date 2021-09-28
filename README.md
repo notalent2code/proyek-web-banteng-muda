@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/praktikum-tiunpad-2021/proyek-web-banteng-muda">
-    <img src="/assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="/assets/logo.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">Koperasi Simpan Pinjam</h3>
@@ -54,8 +54,22 @@
 
 <!-- Mockup Kasar -->
 ## Mockup Kasar
-
-TO;DO
+<table>
+  <tr>
+    <td width="50%" height="50%">
+      <img src="/assets/HalDepan.PNG" alt="Halaman Depan">
+    </td>
+    <td width="50%" height="50%">
+      <img src="/assets/HalDaftar.PNG" alt="Halaman Daftar">
+    </td>
+  <tr>
+  <tr>
+    <td width="50%" height="50%">
+      <img src="/assets/HalLogin.PNG" alt="Halaman Login">
+    </td>
+  <tr>
+    
+</table>
 
 <!-- Skema Database -->
 ## Skema Database
