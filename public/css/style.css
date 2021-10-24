@@ -22,14 +22,21 @@ p {
 }
 
 section {
-    padding: 5rem 0;
+    padding: 0 2.5rem;
 }
+
 
 .container {
     width: 100%;
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 2.5rem;
+    /* max-width: 150rem; */
+    /* margin: 0 auto; */
+    /* padding: 0 2.5rem; */
+    /* width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw; */
 }
 
 :root {
@@ -42,16 +49,26 @@ section {
     --white: hsl(0, 0%, 100%);
 }
 
+.u-pd-small {
+    padding: 2.2rem;
+}
+
 .u-mb-small {
     margin-bottom: 1.6rem;
+    /* padding: 2.5rem; */
+
 }
 
 .u-mb-medium {
     margin-bottom: 3rem;
+    /* padding: 2.5rem; */
+
 }
 
 .u-mb-large {
     margin-bottom: 5rem;
+    /* padding: 2.5rem; */
+
 }
 
 header {
@@ -82,7 +99,8 @@ nav {
 
 .nav-ul li {
     list-style: none;
-    margin: 0 1.5rem;
+    margin: 0 2.2rem;
+    padding: 0.3rem;
 } 
 
 li a {
@@ -121,6 +139,7 @@ nav ul li a:hover::before {
     color: var(--white);
     font-weight: 700;
     text-decoration: none;
+    margin-right: 2.2rem;
     padding: 1.3rem 3rem;
     background: linear-gradient(to right, var(--light-purple), var(--purple));
     border-radius: 5rem;
@@ -150,6 +169,7 @@ nav ul li a:hover::before {
 }
 
 .welcome-image img {
+    margin-right: 5rem;
     width: 100%;
     height: 48rem;
     transform: translateY(-15rem);
@@ -157,6 +177,8 @@ nav ul li a:hover::before {
 
 .welcome-text {
     text-align: center;
+    padding: 0 2.5rem;
+    margin: 3rem;
 }
 
 .welcome-text h1 {
@@ -164,6 +186,8 @@ nav ul li a:hover::before {
     font-weight: normal;
     color: var(--dark-blue);
     line-height: 4.5rem;
+    padding: 0 2.5rem;
+
 }
 
 .about-section {
@@ -180,6 +204,7 @@ nav ul li a:hover::before {
     font-weight: normal;
     color: var(--dark-blue);
     line-height: 4.5rem;
+    padding: 2.2rem;
 }
 
 .about-item {
@@ -243,7 +268,7 @@ nav ul li a:hover::before {
 }
 
 footer {
-    padding: 5rem 0;
+    padding: 5rem;
     background-color: var(--dark-blue);
 }
 
@@ -270,110 +295,42 @@ footer {
 .footer-links ul li a:hover {
     color: var(--light-purple);
 }
-
-/* MOBILE RESPONSIVE MENU QUERIES */
-@media screen and (max-width: 832px) {
-    nav .btn {
-        display: none;
-    }
-
-    .nav-ul {
-        flex-direction: column;
-        width: 90%;
-        margin: 0 auto;
-        padding: 1rem 0;
-        margin-top: 4rem;
-        background-color: var(--white);
-        border: 1px solid skyblue;
-        border-radius: .3rem;
-        transform: translateY(-200%);
-        transition: all .5s;
-        z-index: 999;
-    }
-
-    .nav-ul li {
-        padding: 1rem 0;
-        font: 1.6rem;
-    }
-
-    li a {
-        color: var(--dark-blue);
-        font-weight: 400;
-    }
-
-    li a:hover {
-        color: var(--light-purple);
-    *}
-
-    nav ul li a:hover::before {
-        opacity: 0;
-    }
+ 
+.welcome-section {
+    padding: 3rem 0 1rem 0;
 }
 
-/* MEDIA QUERY FOR THE WELCOME SECTION */
-/* FROM MOBILE TO TABLET */
-@media screen and (min-width: 501px) and (max-width: 769px) {
-    .welcome-image {
-        display: inline-block;
-        text-align: center;
-        height: 38rem;
-    }
-
-    .welcome-image::before {
-        top: -35rem;
-        right: 0;
-        width: 65rem;
-        height: 83rem;
-        background-image: url(./images/bg-intro-desktop.svg);
-    }
-
-    .welcome-image img {
-        width: 70%;
-        height: 48rem;
-        transform: translateY(-15rem);
-    }
+.welcome {
+    flex-direction: row;
 }
 
-/* FROM TABLET TO LAPTOP */
-@media screen and (min-width: 770px) {
-    .welcome-section {
-        padding: 3rem 0 1rem 0;
-    }
+.welcome-image::before {
+    display: none;
+}
+.welcome-text {
+    text-align: left;
+    padding: 5rem 0;
+    width: 85%;
+}
 
-    .welcome {
-        flex-direction: row;
-    }
+.welcome-image {
+    width: 100%;
+    position: relative;
+}
 
-    .welcome-image::before {
-        display: none;
-    }
-    .welcome-text {
-        text-align: left;
-        padding: 5rem 0;
-        width: 85%;
-    }
+.welcome-image img {
+    position: absolute;
+    width: 40rem;
+    height: 65rem;
+    right: 0;
+    z-index: 1;
+}
 
-    .welcome-image {
-        width: 100%;
-        position: relative;
-    }
+.about-text {
+    width: 50%;
+    text-align: left;
+}
 
-    .welcome-image img {
-        position: absolute;
-        width: 40rem;
-        height: 65rem;
-        top: -3rem;
-        right: 0;
-        z-index: 1;
-    }
-
-    /* MEDIA QUERY FOR ABOUT SECTION */
-    .about-text {
-        width: 50%;
-        text-align: left;
-    }
-
-    .about-item-box {
-        text-align: left;
-    }
+.about-item-box {
+    text-align: left;
 }
