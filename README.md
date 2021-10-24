@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/praktikum-tiunpad-2021/proyek-web-banteng-muda">
-    <img src="/img/logo.png" alt="Logo" width="120" height="120">
+    <img src="public/img/logo.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">Koperasi Simpan Pinjam</h3>
@@ -57,15 +57,15 @@
 <table>
   <tr>
     <td width="50%" height="50%">
-      <img src="img/hal-depan.png"alt="Halaman Depan">
+      <img src="/public/img/hal-depan.png"alt="Halaman Depan">
     </td>
     <td width="50%" height="50%">
-      <img src="img/hal-daftar.png" alt="Halaman Daftar">
+      <img src="/public/img/hal-daftar.png" alt="Halaman Daftar">
     </td>
   <tr>
   <tr>
     <td width="50%" height="50%">
-      <img src="hal-login.png" alt="Halaman Login">
+      <img src="/public/img/hal-login.png" alt="Halaman Login">
     </td>
   <tr>
     
@@ -73,4 +73,4 @@
 
 <!-- Skema Database -->
 ## Skema Database
-<img src="/img/erd-ksp.png" alt="Skema Database" width="75%" height="75%">
+<img src="public/img/erd-ksp.png" alt="Skema Database" width="75%" height="75%">
