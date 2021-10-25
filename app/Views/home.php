@@ -74,7 +74,7 @@
 
             <div class="review u-pd-small">
                 <div class="review-box">
-                    <img src="" alt="" class="u-mb-small">
+                    <img src="/img/img-person1.jfif" alt="" class="u-mb-small">
                     <div class="review-content">
                         <p class="review-author u-mb-small">
                         Anto
@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="review-box">
-                    <img src="" alt="" class="u-mb-small">
+                    <img src="/img/img-person2.jfif" alt="" class="u-mb-small">
                     <div class="review-content">
                         <p class="review-author u-mb-small">
                         Budi
@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="review-box">
-                    <img src="" alt="" class="u-mb-small">
+                    <img src="/img/img-person3.jfif" alt="" class="u-mb-small">
                     <div class="review-content">
                         <p class="review-author u-mb-small">
                         Tono
@@ -119,7 +119,7 @@
                 </div>
 
                 <div class="review-box">
-                    <img src="" alt="" class="u-mb-small">
+                    <img src="/img/img-person4.jfif" alt="" class="u-mb-small">
                     <div class="review-content">
                         <p class="review-author u-mb-small">
                         Wawan
