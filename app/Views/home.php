@@ -19,12 +19,12 @@
         </div>
     </section>
 
-    <section class="about-section" id="about-section">
+    <section class="about-section">
         <div class="container about u-pd-small">
             <div class="about-text">
-                <h2 class="heading-secondary" style="margin-bottom: -2.5rem">
+                <h1 class="u-mb-small u-pd-small" style="margin-bottom: -2.5rem">
                     Mengapa Cooperativ ?
-                </h2>
+                </h1>
                 <p class="u-pd-small">
                 Kami menyediakan berbagai layanan yang memberikan keuntungan bagi anggota koperasi
                 dengan menjunjung tinggi asas kekeluargaan. Kontrol finansialmu dengan menyimpan uang
@@ -61,13 +61,13 @@
     </section>
 
     <section class="review-section u-pd-small">
-        <div class="container u-pd-small">
+        <div class="u-pd-small">
             <div class="about-text">
-                <h2 class="heading-secondary"style="margin-bottom: -2.5rem">
+                <h1 class="u-mb-small u-pd-small" style="margin-bottom: -2.5rem">
                 Tunggu apa lagi ?
-                </h2>
+                </h1>
                 <p class="u-pd-small">
-                    Bergabung bersama kami dan bersiaplah untuk berkembang bersama komunitas yang suportif.
+                    Bergabung bersama kami dan bersiaplah untuk berkembang <br> bersama komunitas yang suportif.
                     
                 </p>
             </div>

@@ -17,11 +17,16 @@
             <label>Email</label>
         </div>
         <div class="text_field">
+                <input type="password" name="password" id="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+        <div class="text_field">
             <input type="text" name="nohp" id="nohp" required>
             <span></span>
             <label>Nomor HP</label>
         </div>
-        <input type="submit" value="CREATE ACCOUNT" class="btn">
+        <input type="submit" value="Create Account" class="btn">
         <div class="login_link">
         Already a member ? <a href="/login">Log-in</a>
         </div>

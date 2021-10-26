@@ -161,6 +161,7 @@ nav ul li a:hover::before {
 }
 
 .welcome-section {
+    padding: 3rem 0 1rem 0;
     width: 100%;
     background-color: var(--very-light-gray);
 }
@@ -189,9 +190,9 @@ nav ul li a:hover::before {
     margin: 3rem;
 }
 
-.welcome-text h1 {
+h1 {
     font-size: 3.5rem;
-    font-weight: normal;
+    font-weight: bold;
     color: var(--dark-blue);
     line-height: 4.5rem;
     padding: 0 2.5rem;
@@ -200,6 +201,10 @@ nav ul li a:hover::before {
 
 .about, .about-section {
     background-color: var(--light-grayish-blue);
+}
+
+.about-section {
+    padding-left: 3rem;
 }
 
 .about-text {
@@ -232,9 +237,11 @@ nav ul li a:hover::before {
     font-weight: normal;
     color: var(--dark-blue);
     line-height: 4.5rem;
+    padding: 2.2rem;
 }
 
 .review-section {
+    padding-left: 3rem;
     background-color: var(--very-light-gray);
 }
 
@@ -312,10 +319,6 @@ footer {
 .footer-links ul li a:hover {
     color: var(--light-purple);
 }
- 
-.welcome-section {
-    padding: 3rem 0 1rem 0;
-}
 
 .welcome {
     flex-direction: row;
@@ -358,7 +361,6 @@ footer {
     transform: translate(-50%, -50%);
     margin-top: 24%;
     margin-bottom: -15%;
-
     position: relative;
     left: 50%;
     top: 50%;
@@ -366,6 +368,12 @@ footer {
     height: 500px;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+
+#form-signup {
+    height: 570px;
+    margin-top: 30%;
+
 }
 
 .form form{
@@ -383,6 +391,16 @@ form .text_field{
     width: 100%;
     padding: 0 5px;
     height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.text_field textarea{
+    width: 100%;
+    padding: 0 5px;
+    height: 50px;
     font-size: 16px;
     border: none;
     background: none;
@@ -410,10 +428,18 @@ form .text_field{
     transition: .5s;
 }
 
+
 .text_field input:focus ~ label,
 .text_field input:valid ~ label{
     top: -6px;
     color: var(--light-purple);
+}
+
+.text_field textarea:focus ~ label,
+.text_field textarea:valid ~ label{
+    top: -10px;
+    color: var(--light-purple);
+
 }
 
 .pass{
@@ -424,6 +450,12 @@ form .text_field{
 
 .pass:hover{
     text-decoration: underline;
+}
+
+#about {
+    border-radius: 3rem;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    background: linear-gradient(to right, var(--light-purple), var(--purple));
 }
 
 input[type="submit"]{

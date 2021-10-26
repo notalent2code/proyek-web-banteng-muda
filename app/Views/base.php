@@ -7,13 +7,14 @@
 	<title>Cooperativ - Koperasi Simpan Pinjam</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/sticky-navbar.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid" style="padding: 0">
     <?= $this->include('/navbar'); ?>
-	<div class="container">
+	<div class="container-fluid" style="padding: 0">
 		<?= $this->renderSection('content'); ?>
 	</div>
     <?= $this->include('/footer'); ?>
