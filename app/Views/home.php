@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
     <section class="welcome-section">
-        <div class="container welcome u-pd-small">
+        <div class="container-fluid welcome u-pd-small">
             <div class="welcome-text">
                 <h1 class="u-mb-small u-pd-small">
                     Koperasi Simpan Pinjam <br> Berbasis Online bagi Milenial
@@ -20,7 +20,7 @@
     </section>
 
     <section class="about-section">
-        <div class="container about u-pd-small">
+        <div class="container-fluid about u-pd-small">
             <div class="about-text">
                 <h1 class="u-mb-small u-pd-small" style="margin-bottom: -2.5rem">
                     Mengapa Cooperativ ?
@@ -32,26 +32,26 @@
                 </p>
             </div>
 
-            <div class="about-item u-pd-small">
-                <div class="about-item-box">
+            <div class="row about-item u-pd-small">
+                <div class="col about-item-box">
                     <img src="/img/icon-online.svg" alt="" class="u-mb-small">
-                    <h3 class="heading-tertiary u-mb-small">
+                    <h3 class="heading-tertiary u-mb-small" style="padding: 0;">
                         Simpanan yang Menguntungkan
                     </h3>
                     <p>Kami menawarkan jasa simpanan 10% per tahun, yang dibayarkan setiap bulan.</p>
                 </div>
 
-                <div class="about-item-box">
+                <div class="col about-item-box">
                     <img src="/img/icon-budgeting.svg" alt="" class="u-mb-small">
-                    <h3 class="heading-tertiary u-mb-small">
+                    <h3 class="heading-tertiary u-mb-small" style="padding: 0;">
                         Pinjaman untuk Anggota
                     </h3>
                     <p>Pinjaman yang mudah dan terpercaya hanya untuk anggota koperasi.</p>
                 </div>
 
-                <div class="about-item-box">
+                <div class="col about-item-box">
                     <img src="/img/icon-onboarding.svg" alt="" class="u-mb-small">
-                    <h3 class="heading-tertiary u-mb-small">
+                    <h3 class="heading-tertiary u-mb-small" style="padding: 0;">
                         Komunitas & Manfaat Ekstra
                     </h3>
                     <p>Lingungan yang suportif untuk mengembangkan bisnis anda.</p>
@@ -61,7 +61,7 @@
     </section>
 
     <section class="review-section u-pd-small">
-        <div class="u-pd-small">
+        <div class="container-fluid u-pd-small">
             <div class="about-text">
                 <h1 class="u-mb-small u-pd-small" style="margin-bottom: -2.5rem">
                 Tunggu apa lagi ?
@@ -80,10 +80,10 @@
                         Anto
                         </p>
                         <h4 class="review-heading u-mb-small">
-                            Lorem ipsum dolor sit amet
+                            Alur pinjaman mudah
                         </h4>
                         <p class="review-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            "Sangat mudah untuk mengajukan pinjaman dan tidak banyak syarat yang bertele-tele"
                         </p>
                     </div>
                 </div>
@@ -95,10 +95,10 @@
                         Budi
                         </p>
                         <h4 class="review-heading u-mb-small">
-                        Lorem ipsum dolor sit amet
+                            Profit simpanan menjanjikan
                         </h4>
                         <p class="review-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            "Uang yang saya simpan di Cooperativ menghasilkan profit yang cukup banyak bagi saya"
                         </p>
                     </div>
                 </div>
@@ -110,10 +110,10 @@
                         Tono
                         </p>
                         <h4 class="review-heading u-mb-small">
-                            Lorem ipsum dolor sit amet
+                            Komunitas yang suportif
                         </h4>
                         <p class="review-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            "Saya yang seorang pemula di bidang bisnis kuliner selalu diarahkan oleh teman-teman yang sudah berpengalaman"
                         </p>
                     </div>
                 </div>
@@ -125,10 +125,10 @@
                         Wawan
                         </p>
                         <h4 class="review-heading u-mb-small">
-                            Lorem ipsum dolor sit amet
+                            Kemudahan mendaftar
                         </h4>
                         <p class="review-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            "Cukup dengan device dan internet, dapat langsung menikmati layanan yang disediakan oleh Cooperativ"
                         </p>
                     </div>
                 </div>
