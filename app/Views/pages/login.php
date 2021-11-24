@@ -1,11 +1,15 @@
 <?= $this->extend('/base'); ?>
 
 <?= $this->section('content'); ?>
+<?php if (session()->get('success')) : ?>
+<p class="popup">Berhasil register! Silahkan log in.</p>
+<?= session()->get('success') ?>
+<?php endif; ?>
     <div class="form">
         <div class="heading-secondary">
             Log-in to your account
         </div>
-        <form method="post">
+        <form action="login"method="post">
             <div class="text_field">
                 <input type="email" name="email" id="email" required>
                 <span></span>

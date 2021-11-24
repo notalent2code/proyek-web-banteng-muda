@@ -5,7 +5,7 @@
     <div class="heading-secondary">
         Sign-up new account
     </div>
-    <form method="post">
+    <form action="signup" method="post">
         <div class="text_field">
             <input type="text" name="nama" id="nama" required>
             <span></span>
@@ -22,13 +22,13 @@
                 <label>Password</label>
             </div>
         <div class="text_field">
-            <input type="text" name="nohp" id="nohp" required>
+            <input type="text" name="no_hp" id="no_hp" required>
             <span></span>
             <label>Nomor HP</label>
         </div>
         <input type="submit" value="Create Account" class="btn">
         <div class="login_link">
-        Already a member ? <a href="/login">Log-in</a>
+        Already a member ? <a href="pages/login">Log-in</a>
         </div>
     </form>
 </div>

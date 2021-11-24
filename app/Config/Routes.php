@@ -36,9 +36,12 @@ $routes->get('/about', 'Page::about');
 $routes->get('/services', 'Page::services');
 $routes->get('/membership', 'Page::membership');
 $routes->get('/contact', 'Page::contact');
-$routes->get('/login', 'Page::login');
+$routes->get('/login', 'Login::index');
+$routes->get('logout', 'Login::logout');
+$routes->match(['get','post'], 'signup', 'Login::signup');
+/*$routes->get('/login', 'Page::login');
 $routes->get('/signup', 'Page::signup');
-
+*/
 
 /*
  * --------------------------------------------------------------------
