@@ -11,6 +11,7 @@
             <li><a href="/membership">Keanggotaan</a></li>
             <li><a href="/contact">Hubungi Kami</a></li>
             <li><a href="/login">Login</a></li>
+            <li><a href="/logout">Logout</a></li>
             <li><a href="/signup" class="btn" id="nav-btn">Daftar</a></li>
         </ul>
     </nav>
