@@ -41,8 +41,34 @@ $routes->match(['get','post'], 'signup', 'Login::signup');
 $routes->get('/login', 'Login::index');
 $routes->get('logout', 'Login::logout');
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
+$routes->get('/profile', 'Dashboard::profile', ['filter' => 'auth']);
+// $routes->get('/admin', 'Dashboard::admin', ['filter' => 'auth']);
 
-/*
+$routes->get('/anggota', 'Anggota::index', ['filter' => 'auth']);
+$routes->get('/anggota/add_new', 'Anggota::add_new', ['filter' => 'auth']);
+$routes->get('/anggota/save', 'Anggota::save', ['filter' => 'auth']);
+$routes->get('/anggota/edit/(:num)', 'Anggota::edit/$1', ['filter' => 'auth']);
+$routes->post('/anggota/update', 'Anggota::update', ['filter' => 'auth']);
+$routes->get('/anggota/delete/(:num)', 'Anggota::delete/$1', ['filter' => 'auth']);
+
+$routes->get('/simpanan', 'Simpanan::index', ['filter' => 'auth']);
+$routes->get('/simpanan/add_new', 'Simpanan::add_new', ['filter' => 'auth']);
+$routes->get('/simpanan/save', 'Simpanan::save', ['filter' => 'auth']);
+$routes->get('/simpanan/edit/(:num)', 'Simpanan::edit/$1', ['filter' => 'auth']);
+$routes->post('/simpanan/update', 'Simpanan::update', ['filter' => 'auth']);
+$routes->get('/simpanan/delete/(:num)', 'Simpanan::delete/$1', ['filter' => 'auth']);
+
+
+
+// $routes->get('/anggota', 'Data::anggota', ['filter' => 'auth']);
+// $routes->get('/angsuran', 'Data::angsuran', ['filter' => 'auth']);
+// $routes->get('/iuran', 'Data::iuran', ['filter' => 'auth']);
+// $routes->get('/simpanan', 'Data::simpanan', ['filter' => 'auth']);
+// $routes->get('/pinjaman', 'Data::pinjaman', ['filter' => 'auth']);
+$routes->get('/users', 'Users::index', ['filter' => 'auth']);
+
+
+ /*
  * --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------

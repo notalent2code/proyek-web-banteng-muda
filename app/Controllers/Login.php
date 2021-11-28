@@ -11,8 +11,7 @@ class Login extends BaseController
         
         if($this->request->getMethod()== 'post'){
             if(!empty($_POST["remember"])) {
-                setcookie ("email", $_POST["email"], time()+ (3600 * 365 * 24 * 60 * 60));
-                setcookie ("password", $_POST["password"], time()+ (3600 * 365 * 24 * 60 * 60));
+                setcookie ("email", $_POST["email"], time() + (86400 * 30), '/');
                 $model = new UserModel();
                 $user = $model->where('email', $this->request->getVar('email'))->first();
                 $this->setUserSession($user);
@@ -87,7 +86,8 @@ class Login extends BaseController
     
     public function logout(){
         session()->destroy();
-        return redirect()->to('/');
+        
+        return redirect()->to('/')->deleteCookie('email');
     }
 
 }

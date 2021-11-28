@@ -16,6 +16,9 @@
                 <span></span>
                 <label>Password</label>
             </div>
+            <div class="col-12 col-sm-6">
+              <input type="hidden" name="level" id="level" value="1">
+            </div>
             <?php if (isset($validation)) : ?>
               <div class="col-12">
                 <div class="alert alert-danger" role="alert">
