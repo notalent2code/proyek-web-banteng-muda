@@ -7,18 +7,17 @@
         <div class="row">
             <div class="col">
                 <div>
-                    <h1 class="u-mb-small">
+                    <div class="heading-tertiary u-mb-small">
                         Selamat datang, 
                         <?php if(session()->get('level') === '2') : ?>
                             Admin ! <br>
-                            <div class="heading-tertiary" align="center">
-                                Database Koperasi Simpan Pinjam Cooperativ
+                            <div class="heading-primary" align="center">
+                                <h1>Database Koperasi Simpan Pinjam Cooperativ</h1>
                             </div>
                         <?php else : ?>
                             <?= session()->get('email'); echo " !"; ?>
                         <?php endif; ?>
-                    </h1>
-                        
+                    </div>
                     <?php if(session()->get('level') === '2') : ?>
                         <div class="row nav-ul" style="text-align: center;">
                             <div class="col review-box ">
@@ -50,7 +49,7 @@
                             </div>
                             <div class="col review-box">
                                 <div class="heading-tertiary review-content">
-                                    <li><a href="/users">Data User</a></li>
+                                    <li><a href="/user">Data User</a></li>
                                 </div>
                             </div>
                         </div>

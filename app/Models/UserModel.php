@@ -15,4 +15,31 @@ class UserModel extends Model {
         }
         return $data;
     }
+
+    public function getUser($email = false)
+    {
+      if($email === false){
+        return $this->findAll();
+      } else {
+        return $this->getWhere(['email' => $email]);
+      }
+    }
+  
+    public function saveUser($data)
+    {
+      $query = $this->db->table($this->table)->insert($data);
+      return $query;
+    }
+  
+    public function updateUser($data, $email)
+    {
+      $query = $this->db->table($this->table)->update($data, array('email' => $email));
+      return $query;
+    }
+  
+    public function deleteUser($email)
+    {
+      $query = $this->db->table($this->table)->delete(array('email' => $email));
+      return $query;
+    }
 }

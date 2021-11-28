@@ -72,6 +72,20 @@ $routes->get('/iuran/edit/(:num)', 'Iuran::edit/$1', ['filter' => 'auth']);
 $routes->post('/iuran/update', 'Iuran::update', ['filter' => 'auth']);
 $routes->get('/iuran/delete/(:num)', 'Iuran::delete/$1', ['filter' => 'auth']);
 
+$routes->get('/angsuran', 'Angsuran::index', ['filter' => 'auth']);
+$routes->get('/angsuran/add_new', 'Angsuran::add_new', ['filter' => 'auth']);
+$routes->get('/angsuran/save', 'Angsuran::save', ['filter' => 'auth']);
+$routes->get('/angsuran/edit/(:num)', 'Angsuran::edit/$1', ['filter' => 'auth']);
+$routes->post('/angsuran/update', 'Angsuran::update', ['filter' => 'auth']);
+$routes->get('/angsuran/delete/(:num)', 'Angsuran::delete/$1', ['filter' => 'auth']);
+
+$routes->get('/user', 'User::index', ['filter' => 'auth']);
+$routes->get('/user/add_new', 'User::add_new', ['filter' => 'auth']);
+$routes->get('/user/save', 'User::save', ['filter' => 'auth']);
+$routes->get('/user/edit/(:num)', 'User::edit/$1', ['filter' => 'auth']);
+$routes->post('/user/update', 'User::update', ['filter' => 'auth']);
+$routes->get('/user/delete/(:num)', 'User::delete/$1', ['filter' => 'auth']);
+
 
 
 // $routes->get('/anggota', 'Data::anggota', ['filter' => 'auth']);
@@ -79,7 +93,7 @@ $routes->get('/iuran/delete/(:num)', 'Iuran::delete/$1', ['filter' => 'auth']);
 // $routes->get('/iuran', 'Data::iuran', ['filter' => 'auth']);
 // $routes->get('/simpanan', 'Data::simpanan', ['filter' => 'auth']);
 // $routes->get('/pinjaman', 'Data::pinjaman', ['filter' => 'auth']);
-$routes->get('/users', 'Users::index', ['filter' => 'auth']);
+// $routes->get('/users', 'Users::index', ['filter' => 'auth']);
 
 
  /*
