@@ -65,6 +65,13 @@ $routes->get('/pinjaman/edit/(:num)', 'Pinjaman::edit/$1', ['filter' => 'auth'])
 $routes->post('/pinjaman/update', 'Pinjaman::update', ['filter' => 'auth']);
 $routes->get('/pinjaman/delete/(:num)', 'Pinjaman::delete/$1', ['filter' => 'auth']);
 
+$routes->get('/iuran', 'Iuran::index', ['filter' => 'auth']);
+$routes->get('/iuran/add_new', 'Iuran::add_new', ['filter' => 'auth']);
+$routes->get('/iuran/save', 'Iuran::save', ['filter' => 'auth']);
+$routes->get('/iuran/edit/(:num)', 'Iuran::edit/$1', ['filter' => 'auth']);
+$routes->post('/iuran/update', 'Iuran::update', ['filter' => 'auth']);
+$routes->get('/iuran/delete/(:num)', 'Iuran::delete/$1', ['filter' => 'auth']);
+
 
 
 // $routes->get('/anggota', 'Data::anggota', ['filter' => 'auth']);
