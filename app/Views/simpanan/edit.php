@@ -16,7 +16,7 @@
     </div>
     <div class="text_field">
         <input type="text" class="form-control" name="jangka_waktu" value="<?= $simpanan->jangka_waktu; ?>"></p>
-        <label for="jangka_waktu">Jangka Waktu</label>
+        <label for="jangka_waktu">Jangka Waktu (Bulan)</label>
     </div>
     <input type="hidden" name="no_simpanan" value="<?= $simpanan->no_simpanan; ?>">
     <input type="hidden" name="no_anggota" value="<?= $simpanan->no_anggota; ?>">

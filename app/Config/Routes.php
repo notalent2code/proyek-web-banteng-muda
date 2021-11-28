@@ -58,6 +58,13 @@ $routes->get('/simpanan/edit/(:num)', 'Simpanan::edit/$1', ['filter' => 'auth'])
 $routes->post('/simpanan/update', 'Simpanan::update', ['filter' => 'auth']);
 $routes->get('/simpanan/delete/(:num)', 'Simpanan::delete/$1', ['filter' => 'auth']);
 
+$routes->get('/pinjaman', 'Pinjaman::index', ['filter' => 'auth']);
+$routes->get('/pinjaman/add_new', 'Pinjaman::add_new', ['filter' => 'auth']);
+$routes->get('/pinjaman/save', 'Pinjaman::save', ['filter' => 'auth']);
+$routes->get('/pinjaman/edit/(:num)', 'Pinjaman::edit/$1', ['filter' => 'auth']);
+$routes->post('/pinjaman/update', 'Pinjaman::update', ['filter' => 'auth']);
+$routes->get('/pinjaman/delete/(:num)', 'Pinjaman::delete/$1', ['filter' => 'auth']);
+
 
 
 // $routes->get('/anggota', 'Data::anggota', ['filter' => 'auth']);

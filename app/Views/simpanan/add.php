@@ -24,7 +24,7 @@
     </div>
     <div class="text_field">
         <input type="text" class="form-control" name="jangka_waktu" value=""></p>
-        <label for="jangka_waktu">Jangka Waktu</label>
+        <label for="jangka_waktu">Jangka Waktu (Bulan)</label>
     </div>
     <input type="submit" value="Save" class="btn">
   </form>
