@@ -36,7 +36,7 @@
 <!-- Fungsi -->
 ## Fungsi
 - Menyediakan layanan simpanan yang menguntungkan bagi anggota
-- Menawarkan layanan pinjaman yang mudah dan terpecaya bagi anggota
+- Menawarkan layanan pinjaman yang mudah dan terpercaya bagi anggota
 - Menjadi tempat interaksi dan diskusi bagi para anggota koperasi 
 - Mengelola dana yang dihimpun oleh para anggota lalu disalurkan kembali
 - Mendorong kegiatan transaksi agar meningkatkan produktivitas anggota
