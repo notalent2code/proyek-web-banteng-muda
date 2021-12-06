@@ -11,7 +11,6 @@
                 <thead>
                     <tr>
                         <th>Email</th>
-                        <th>Password</th>
                         <th>Level</th>
                         <th colspan="2">Action</th>
                     </tr>
@@ -20,10 +19,9 @@
                     <?php foreach ($user as $row) : ?>
                         <tr>
                             <td data-title="Email"><?= $row['email']; ?></td>
-                            <td data-title="Password"><?= $row['password']; ?></td>
                             <td data-title="Level"><?= $row['level']; ?></td>
                             <td data-title="Action"><a class="action-btn" href="/user/edit/<?= $row['email']; ?>">Edit</a></td>
-                            <td data-title="Action"><a class="action-btn" href="/user/delete/<?= $row['email']; ?>" onclick="return confirm('Anda Yakin ?')">Delete</a></td>
+                            <td data-title="Action"><a class="action-btn" href="/user/delete/<?= $row['email']; ?>" onclick="return confirm('Anda Yakin ? Semua Data Terkait User Ini Akan Terhapus')">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

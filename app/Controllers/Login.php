@@ -44,7 +44,6 @@ class Login extends BaseController
     private function setUserSession($user){
         $data = [
             'email'=>$user['email'],
-            'password'=>$user['password'],
             'level'=>$user['level'],
             'isLoggedIn'=>true,
         ];

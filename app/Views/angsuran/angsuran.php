@@ -11,7 +11,7 @@
                 <thead>
                     <tr>
                         <th>No Angsuran</th>
-                        <th>No Iuran</th>
+                        <th>No Pinjaman</th>
                         <th>Cicilan</th>
                         <th>Angsuran Ke-</th>
                         <th>Tanggal Bayar</th>

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\AnggotaModel;
+use App\Models\UserModel;
 use CodeIgniter\HTTP\Request;
 
 class Anggota extends BaseController
@@ -14,7 +15,10 @@ class Anggota extends BaseController
     }
 
     public function add_new(){
-        return view('anggota/add');
+        $model = new UserModel();
+        $email = session()->get('email');
+        $data['user'] = $model->getUser($email)->getRow();
+        return view('anggota/add', $data);
     }
 
     public function save(){
@@ -30,6 +34,9 @@ class Anggota extends BaseController
         'email' => $this->request->getPost('email'),
       );
       $model->saveAnggota($data);
+      if(session()->get('level') === '1'){
+        return redirect()->to('/dashboard');
+      }
       return redirect()->to('/anggota');
     }
 

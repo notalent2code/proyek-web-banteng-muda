@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 class UserModel extends Model {
     protected $table = 'users';
     protected $primaryKey = 'email';
-    protected $allowedFields = ['email','password','level'];
+    protected $allowedFields = ['email','password','level', 'foto_profil'];
     protected $beforeInsert = ['hashPassword'];
     protected $beforeUpdate = ['hashPassword'];
 
@@ -28,6 +28,11 @@ class UserModel extends Model {
     public function saveUser($data)
     {
       $query = $this->db->table($this->table)->insert($data);
+      return $query;
+    }
+
+    public function saveImage($data, $email){
+      $query = $this->db->query("UPDATE users SET foto_profil = '$data' where email = '$email'");
       return $query;
     }
   

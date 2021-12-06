@@ -42,7 +42,6 @@ $routes->get('/login', 'Login::index');
 $routes->get('logout', 'Login::logout');
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('/profile', 'Dashboard::profile', ['filter' => 'auth']);
-// $routes->get('/admin', 'Dashboard::admin', ['filter' => 'auth']);
 
 $routes->get('/anggota', 'Anggota::index', ['filter' => 'auth']);
 $routes->get('/anggota/add_new', 'Anggota::add_new', ['filter' => 'auth']);

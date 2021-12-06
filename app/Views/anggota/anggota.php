@@ -33,7 +33,7 @@
                             <td data-title="No HP"><?= $row['no_hp']; ?></td>
                             <td data-title="Email"><?= $row['email']; ?></td>
                             <td data-title="Action"><a class="action-btn" href="/anggota/edit/<?= $row['no_anggota']; ?>">Edit</a></td>
-                            <td data-title="Action"><a class="action-btn" href="/anggota/delete/<?= $row['no_anggota']; ?>" onclick="return confirm('Anda Yakin ?')">Delete</a></td>
+                            <td data-title="Action"><a class="action-btn" href="/anggota/delete/<?= $row['no_anggota']; ?>" onclick="return confirm('Anda Yakin ? Semua Data Terkait Anggota Ini Akan Terhapus')">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -15,6 +15,11 @@ class AnggotaModel extends Model
     }
   }
 
+  public function getAnggotaEmail($email = false)
+  {
+    return $this->getWhere(['email' => $email]);
+  }
+
   public function saveAnggota($data)
   {
     $query = $this->db->table($this->table)->insert($data);

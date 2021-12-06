@@ -1,5 +1,5 @@
-<header>
-    <nav >
+<header id="header">
+    <nav id="nav">
         <br>
         <!-- <a href="/"><img src="/img/logo-1.png" alt="" class="logo"></a> -->
         <!-- <a href="/" class="heading-secondary" style="padding: 0; margin: 0;">Cooperativ</a> -->
