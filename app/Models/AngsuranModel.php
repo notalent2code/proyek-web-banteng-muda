@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Models;
+
 use CodeIgniter\Model;
 
 class AngsuranModel extends Model
@@ -8,7 +10,7 @@ class AngsuranModel extends Model
 
   public function getAngsuran($no_angsuran = false)
   {
-    if($no_angsuran === false){
+    if ($no_angsuran === false) {
       return $this->findAll();
     } else {
       return $this->getWhere(['no_angsuran' => $no_angsuran]);

@@ -12,22 +12,22 @@ class Dashboard extends BaseController
         $model = new UserModel();
         $model2 = new AnggotaModel();
         $email = session()->get('email');
-        if(session()->get('level') === '2'){
+        if (session()->get('level') === '2') {
             return view('pages/dashboard');
-        }
-        else if(session()->get('level') === '1'){
+        } else if (session()->get('level') === '1') {
             $data['user'] = $model->getUser($email)->getRow();
             $data['anggota'] = $model2->getAnggotaEmail($email)->getRow();
 
-            if($data['anggota'] === null){
+            if ($data['anggota'] === null) {
                 return redirect()->to('/anggota/add_new');
             }
         }
         return view('pages/dashboard', $data);
     }
 
-    public function profile(){
-        if(session()->get('level') === '1'){
+    public function profile()
+    {
+        if (session()->get('level') === '1') {
             $email = session()->get('email');
             $model = new UserModel();
             $model2 = new AnggotaModel();
@@ -38,7 +38,8 @@ class Dashboard extends BaseController
         return redirect()->to('/dashboard');
     }
 
-    public function fotoProfil(){
+    public function fotoProfil()
+    {
         $session = session();
         $namaFile = $_FILES["foto_profil"]["name"];
         $sizeFile = $_FILES["foto_profil"]["size"];
@@ -49,20 +50,20 @@ class Dashboard extends BaseController
         $allowedFileExt = ["jpg", "jpeg", "png"];
         $fileExt = explode('.', $namaFile);
         $fileExt = strtolower(end($fileExt));
-        
-        if($error === 4){
+
+        if ($error === 4) {
             $session->setFlashdata('error', 'Tidak ada foto yang diupload !');
             $errorCheck = true;
-        } else if(!in_array($fileExt, $allowedFileExt)){            
+        } else if (!in_array($fileExt, $allowedFileExt)) {
             $session->setFlashdata('error', 'Extensi File Salah !');
             $errorCheck = true;
-        } else if($sizeFile > 5000000){
+        } else if ($sizeFile > 5000000) {
             $session->setFlashdata('error', 'File yang diupload lebih dari 5 MB !');
             $errorCheck = true;
         }
-        
-        if ($errorCheck){
-            return redirect()->to('/profile');            
+
+        if ($errorCheck) {
+            return redirect()->to('/profile');
         }
 
         $newFileName = uniqid();
@@ -72,7 +73,7 @@ class Dashboard extends BaseController
         $session = session()->get('email');
 
         $dir = "foto_profil/$session";
-        if(!is_dir($dir)){
+        if (!is_dir($dir)) {
             mkdir("foto_profil/" . session()->get('email'), 0777, true);
         }
         move_uploaded_file($tmpName, 'foto_profil/' . session()->get('email') . '/' . $newFileName);
@@ -81,6 +82,6 @@ class Dashboard extends BaseController
         $email = session()->get('email');
         $data = $newFileName;
         $model->saveImage($data, $email);
-        return redirect()->to('/profile');   
+        return redirect()->to('/profile');
     }
 }

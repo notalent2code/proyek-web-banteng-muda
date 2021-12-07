@@ -25,17 +25,17 @@
             <div class="row" style="margin: 2rem; padding: 2rem;">
                 <div class="col">
                     <p>
-                    Meningkatkan pendapatan sekaligus kesejahteraan anggota melalui penyaluran dana kredit
+                        Meningkatkan pendapatan sekaligus kesejahteraan anggota melalui penyaluran dana kredit
                     </p>
                 </div>
                 <div class="col">
                     <p>
-                    Meningkatkan stimulus agar timbul keinginan untuk menabung atau meminjam di koperasi
+                        Meningkatkan stimulus agar timbul keinginan untuk menabung atau meminjam di koperasi
                     </p>
                 </div>
                 <div class="col">
                     <p>
-                    Menyediakan lingkungan yang suportif untuk anggotanya
+                        Menyediakan lingkungan yang suportif untuk anggotanya
                     </p>
                 </div>
             </div>
@@ -45,8 +45,8 @@
 <section class="review-section u-pd-small" align="center">
     <div class="container u-pd-small">
         <div class="about-text" style="width: 100%">
-            <h2 class="heading-secondary"style="margin-bottom: -2.5rem" align="center">
-            Meet our Team
+            <h2 class="heading-secondary" style="margin-bottom: -2.5rem" align="center">
+                Meet our Team
             </h2>
         </div>
 

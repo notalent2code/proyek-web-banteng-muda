@@ -6,10 +6,12 @@ use CodeIgniter\HTTP\Request;
 
 class Page extends BaseController
 {
-    public function about(){
+    public function about()
+    {
         return view('pages/about');
     }
-    public function services(){
+    public function services()
+    {
         return view('pages/services');
     }
     public function membership()
@@ -20,5 +22,4 @@ class Page extends BaseController
     {
         return view('pages/contact');
     }
-
 }

@@ -20,8 +20,8 @@
             </ul>
         </div>
         <div class="footer-links">
-            <?php if(!(session()->get('isLoggedIn'))) : ?>
-                <a href="/signup" class="btn" >Daftar</a>
+            <?php if (!(session()->get('isLoggedIn'))) : ?>
+                <a href="/signup" class="btn">Daftar</a>
             <?php endif; ?>
             <div class="footer-text" style="padding-top: 2rem">
                 <p>© 2021. All Rights Reserved. <br>Koperasi Simpan Pinjam Cooperativ</p>

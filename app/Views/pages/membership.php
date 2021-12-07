@@ -23,10 +23,10 @@
             </div>
             <div class="col">
                 <div class="heading-tertiary">
-                     
+
                 </div>
                 <p style="padding: 0 2.2rem 1rem 2.2rem">
-                    
+
                 </p>
             </div>
         </div>

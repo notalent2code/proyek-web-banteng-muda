@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Models;
+
 use CodeIgniter\Model;
 
 class AnggotaModel extends Model
@@ -8,7 +10,7 @@ class AnggotaModel extends Model
 
   public function getAnggota($no_anggota = false)
   {
-    if($no_anggota === false){
+    if ($no_anggota === false) {
       return $this->findAll();
     } else {
       return $this->getWhere(['no_anggota' => $no_anggota]);
@@ -31,7 +33,7 @@ class AnggotaModel extends Model
     $query = $this->db->table($this->table)->update($data, array('no_anggota' => $no_anggota));
     return $query;
   }
-  
+
   public function deleteAnggota($no_anggota)
   {
     $query = $this->db->table($this->table)->delete(array('no_anggota' => $no_anggota));

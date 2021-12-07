@@ -1,17 +1,19 @@
-<?php 
+<?php
+
 namespace App\Controllers;
+
 use App\Models\UserModel;
 
 class Login extends BaseController
 {
-	public function index()
-	{
-        $data=[];
+    public function index()
+    {
+        $data = [];
         helper(['form']);
-        
-        if($this->request->getMethod()== 'post'){
-            if(!empty($_POST["remember"])) {
-                setcookie ("email", $_POST["email"], time() + (86400 * 30), '/');
+
+        if ($this->request->getMethod() == 'post') {
+            if (!empty($_POST["remember"])) {
+                setcookie("email", $_POST["email"], time() + (86400 * 30), '/');
                 $model = new UserModel();
                 $user = $model->where('email', $this->request->getVar('email'))->first();
                 $this->setUserSession($user);
@@ -28,10 +30,9 @@ class Login extends BaseController
                 ]
             ];
 
-            if (!$this->validate($rules, $errors)){
-                $data['validation']= $this->validator;
-            }
-            else {
+            if (!$this->validate($rules, $errors)) {
+                $data['validation'] = $this->validator;
+            } else {
                 $model = new UserModel();
                 $user = $model->where('email', $this->request->getVar('email'))->first();
                 $this->setUserSession($user);
@@ -39,13 +40,14 @@ class Login extends BaseController
             }
         }
         return view('pages/login', $data);
-	}
+    }
 
-    private function setUserSession($user){
+    private function setUserSession($user)
+    {
         $data = [
-            'email'=>$user['email'],
-            'level'=>$user['level'],
-            'isLoggedIn'=>true,
+            'email' => $user['email'],
+            'level' => $user['level'],
+            'isLoggedIn' => true,
         ];
         session()->set($data);
         return true;
@@ -53,27 +55,26 @@ class Login extends BaseController
 
     public function signup()
     {
-        $data=[];
+        $data = [];
         helper(['form']);
-        if($this->request->getMethod()== 'post'){
-            
+        if ($this->request->getMethod() == 'post') {
+
             $rules = [
                 'email' => 'required|min_length[5]|max_length[100]|valid_email|is_unique[users.email]',
                 'password' => 'required|min_length[5]|max_length[255]',
                 'password_confirm' => 'matches[password]'
             ];
 
-            if (!$this->validate($rules)){
+            if (!$this->validate($rules)) {
                 $data['validation'] = $this->validator;
-            }
-            else {
+            } else {
                 $model = new UserModel();
                 $newData = [
-                    'email'=> $this->request->getVar('email'),
+                    'email' => $this->request->getVar('email'),
                     'password' => $this->request->getVar('password'),
                     'level' => $this->request->getVar('level')
                 ];
-                
+
                 $model->ignore(true)->insert($newData);
                 $session = session();
                 $session->setFlashdata('success', 'Successful Registration');
@@ -82,11 +83,11 @@ class Login extends BaseController
         }
         return view('pages/signup', $data);
     }
-    
-    public function logout(){
+
+    public function logout()
+    {
         session()->destroy();
-        
+
         return redirect()->to('/')->deleteCookie('email');
     }
-
 }

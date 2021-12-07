@@ -23,12 +23,12 @@
         <div class="col-12 col-sm-6">
             <input type="hidden" name="level" id="level" value="1">
         </div>
-        <?php if(isset($validation)) : ?>
-                <div class="col-12">
-                  <div class="alert alert-danger" role="alert">
+        <?php if (isset($validation)) : ?>
+            <div class="col-12">
+                <div class="alert alert-danger" role="alert">
                     <?= $validation->listErrors() ?>
-                  </div>
                 </div>
+            </div>
         <?php endif; ?>
         <!-- <input type="submit" value=""> -->
         <!-- <button type="submit" class="btn"></button> -->

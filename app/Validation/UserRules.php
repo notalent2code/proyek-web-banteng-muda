@@ -10,7 +10,7 @@ class UserRules
   {
     $model = new UserModel();
     $user = $model->where('email', $data['email'])->first();
-    if (!$user){
+    if (!$user) {
       return false;
     }
     return password_verify($data['password'], $user['password']);

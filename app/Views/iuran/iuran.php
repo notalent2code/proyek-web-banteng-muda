@@ -3,10 +3,12 @@
 <?= $this->section('content'); ?>
 
 <div class="container-fluid">
-        <h1 style="padding: 0.5rem;" align="center">DATA IURAN KOPERASI SIMPAN PINJAM COOPERATIV</h1 align="center">
+    <h1 style="padding: 0.5rem;" align="center">DATA IURAN KOPERASI SIMPAN PINJAM COOPERATIV</h1 align="center">
     <div class="row" style="    background: var(--dark-blue);">
         <div class="col">
-        <a href="/iuran/add_new" class="action-btn" style="margin: 2.2rem 0 0 2.2rem; padding: 1.8rem" align="center"><h4>Tambah Data</h4></a>
+            <a href="/iuran/add_new" class="action-btn" style="margin: 2.2rem 0 0 2.2rem; padding: 1.8rem" align="center">
+                <h4>Tambah Data</h4>
+            </a>
             <table>
                 <thead>
                     <tr>

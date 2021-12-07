@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Models;
+
 use CodeIgniter\Model;
 
 class PinjamanModel extends Model
@@ -8,7 +10,7 @@ class PinjamanModel extends Model
 
   public function getPinjaman($no_pinjaman = false)
   {
-    if($no_pinjaman === false){
+    if ($no_pinjaman === false) {
       return $this->findAll();
     } else {
       return $this->getWhere(['no_pinjaman' => $no_pinjaman]);
@@ -17,7 +19,7 @@ class PinjamanModel extends Model
 
   public function getPinjamanAnggota($email = false)
   {
-    if($email === false){
+    if ($email === false) {
       return $this->findAll();
     } else {
       return $this->getWhere(['email' => $email]);

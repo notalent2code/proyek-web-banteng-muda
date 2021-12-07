@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Models;
+
 use CodeIgniter\Model;
 
 class IuranModel extends Model
@@ -8,7 +10,7 @@ class IuranModel extends Model
 
   public function getIuran($no_iuran = false)
   {
-    if($no_iuran === false){
+    if ($no_iuran === false) {
       return $this->findAll();
     } else {
       return $this->getWhere(['no_iuran' => $no_iuran]);

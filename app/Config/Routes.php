@@ -37,7 +37,7 @@ $routes->get('/about', 'Page::about');
 $routes->get('/services', 'Page::services');
 $routes->get('/membership', 'Page::membership');
 $routes->get('/contact', 'Page::contact');
-$routes->match(['get','post'], 'signup', 'Login::signup');
+$routes->match(['get', 'post'], 'signup', 'Login::signup');
 $routes->get('/login', 'Login::index');
 $routes->get('logout', 'Login::logout');
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
@@ -95,7 +95,7 @@ $routes->get('/user/delete/(:num)', 'User::delete/$1', ['filter' => 'auth']);
 // $routes->get('/users', 'Users::index', ['filter' => 'auth']);
 
 
- /*
+/*
  * --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------

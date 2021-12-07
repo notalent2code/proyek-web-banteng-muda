@@ -8,7 +8,7 @@
             <div class="col">
                 <div>
                     <div class="heading-tertiary u-mb-small">
-                        <?php if(session()->get('level') === '2') : ?>
+                        <?php if (session()->get('level') === '2') : ?>
                             Selamat datang, Admin ! <br>
                             <div class="heading-primary" align="center">
                                 <h1>Database Koperasi Simpan Pinjam Cooperativ</h1>
@@ -17,7 +17,7 @@
                             Selamat datang, <?= $anggota->nama; ?> !
                         <?php endif; ?>
                     </div>
-                    <?php if(session()->get('level') === '2') : ?>
+                    <?php if (session()->get('level') === '2') : ?>
                         <div class="row nav-ul" style="text-align: center;">
                             <div class="col review-box ">
                                 <div class="heading-tertiary review-content">
@@ -31,7 +31,7 @@
                             </div>
                             <div class="col review-box">
                                 <div class="heading-tertiary review-content">
-                                <li><a href="/iuran">Data Iuran</a></li>
+                                    <li><a href="/iuran">Data Iuran</a></li>
                                 </div>
                             </div>
                         </div>
@@ -62,8 +62,8 @@
                         </div>
                     <?php endif; ?>
                 </div>
-        </div>        
-    </div>
+            </div>
+        </div>
 </section>
 
 <?= $this->endSection('content'); ?>
