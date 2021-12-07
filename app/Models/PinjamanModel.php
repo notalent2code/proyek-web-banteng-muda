@@ -17,12 +17,12 @@ class PinjamanModel extends Model
     }
   }
 
-  public function getPinjamanAnggota($email = false)
+  public function getPinjamanAnggota($no_anggota = false)
   {
-    if ($email === false) {
+    if ($no_anggota === false) {
       return $this->findAll();
     } else {
-      return $this->getWhere(['email' => $email]);
+      return $this->getWhere(['no_anggota' => $no_anggota]);
     }
   }
 

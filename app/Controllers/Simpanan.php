@@ -88,8 +88,8 @@ class Simpanan extends BaseController
 
     public function delete($no_simpanan)
     {
-        $model = new SimpananModel();
         if (session()->get('level') === '2') {
+            $model = new SimpananModel();
             $model->deleteSimpanan($no_simpanan);
         }
         return redirect()->to('/simpanan');

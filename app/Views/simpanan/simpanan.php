@@ -81,7 +81,7 @@
                         </tr>
                         <tr>
                             <td>Tanggal Setor</td>
-                            <td><?= $simpanan->tanggal_setor; ?></td>
+                            <td><?= date('d-m-Y', strtotime($simpanan->tanggal_setor)); ?></td>
                         </tr>
                         <tr>
                             <td>Jangka Waktu (Bulan)</td>

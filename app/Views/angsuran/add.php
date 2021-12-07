@@ -2,7 +2,8 @@
 
 <?= $this->section('content'); ?>
 <div class="form form-anggota" style="height: 550px;">
-    <div class="heading-secondary">
+    <?php if(session()->get('level') === '2') : ?>
+        <div class="heading-secondary">
         Tambah Data Angsuran
     </div>
     <form action="/angsuran/save" method="post">
@@ -22,10 +23,13 @@
             <input type="text" class="form-control" name="angsuran_ke" value=""></p>
             <label for="angsuran_ke">Angsuran Ke-</label>
         </div>
-        <div class="">
-            <label for="tanggal_bayar">Tanggal Bayar</label>
-            <input type="date" class="form-control" name="tanggal_bayar" value=""></p>
+        <div class="text_field">
+            <input type="text" class="form-control" name="status_angsuran" value=""></p>
+            <label for="status_angsuran">Status Angsuran</label>
         </div>
+        <input type="date" hidden class="form-control" name="tanggal_bayar" value="<?php echo date('Y-m-d'); ?>"></p>
+
+    <?php endif ?>
         <input type="submit" value="Save" class="btn">
     </form>
 </div>

@@ -17,6 +17,15 @@ class AngsuranModel extends Model
     }
   }
 
+  public function getAngsuranPinjaman($no_pinjaman = false)
+  {
+    if ($no_pinjaman === false) {
+      return $this->findAll();
+    } else {
+      return $this->getWhere(['no_pinjaman' => $no_pinjaman]);
+    }
+  }
+
   public function saveAngsuran($data)
   {
     $query = $this->db->table($this->table)->insert($data);

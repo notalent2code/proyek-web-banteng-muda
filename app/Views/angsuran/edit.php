@@ -18,6 +18,11 @@
             <label for="tanggal_bayar">Tanggal Bayar</label>
             <input type="date" class="form-control" name="tanggal_bayar" value="<?= $angsuran->tanggal_bayar; ?>"></p>
         </div>
+        <select name="status_angsuran" id="">
+            <option value="Belum Bayar">Belum Bayar</option>
+            <option value="Sudah Bayar">Sudah Bayar</option>
+            <option value="Sedang Diverifikasi">Sedang Diverifikasi</option>
+        </select>
         <input type="hidden" name="no_angsuran" value="<?= $angsuran->no_angsuran; ?>">
         <input type="hidden" name="no_pinjaman" value="<?= $angsuran->no_pinjaman; ?>">
 

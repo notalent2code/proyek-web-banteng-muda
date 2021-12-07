@@ -6,14 +6,11 @@
         Edit Data User
     </div>
     <form action="/user/update" method="post">
-        <div class="text_field">
-            <input type="password" class="form-control" name="password" value="<?= $user->password; ?>"></p>
-            <label for="password">Password</label>
-        </div>
-        <div class="text_field">
-            <input type="text" class="form-control" name="level" value="<?= $user->level; ?>"></p>
-            <label for="level">Level</label>
-        </div>
+        <select name="level" id="">
+            <option value="1">Level 1 (User)</option>
+            <option value="2">Level 2 (Admin)</option>
+        </select>
+  
         <input type="hidden" name="email" value="<?= $user->email; ?>">
 
         <input type="submit" value="Update" class="btn">

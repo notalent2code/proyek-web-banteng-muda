@@ -10,9 +10,12 @@ class Anggota extends BaseController
 {
   public function index()
   {
-    $model = new AnggotaModel();
-    $data['anggota'] = $model->getAnggota();
-    return view('anggota/anggota', $data);
+    if(session()->get('level') === '2'){
+      $model = new AnggotaModel();
+      $data['anggota'] = $model->getAnggota();
+      return view('anggota/anggota', $data);
+    }
+    return redirect()->to('profile');
   }
 
   public function add_new()
@@ -37,10 +40,10 @@ class Anggota extends BaseController
       'email' => $this->request->getPost('email'),
     );
     $model->saveAnggota($data);
-    if (session()->get('level') === '1') {
-      return redirect()->to('/dashboard');
+    if (session()->get('level') === '2') {
+      return redirect()->to('/anggota');
     }
-    return redirect()->to('/anggota');
+    return redirect()->to('/dashboard');
   }
 
   public function edit($no_anggota)
@@ -70,8 +73,11 @@ class Anggota extends BaseController
 
   public function delete($no_anggota)
   {
-    $model = new AnggotaModel();
-    $model->deleteAnggota($no_anggota);
-    return redirect()->to('/anggota');
+    if (session()->get('level') === '2'){
+      $model = new AnggotaModel();
+      $model->deleteAnggota($no_anggota);
+      return redirect()->to('/anggota');
+    }
+    return redirect()->to('/dashboard');
   }
 }

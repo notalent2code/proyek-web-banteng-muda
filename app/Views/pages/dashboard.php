@@ -59,6 +59,11 @@
                                     <li><a href="/simpanan/add_new">Tambah Simpanan</a></li>
                                 </div>
                             </div>
+                            <div class="col review-box">
+                                <div class="heading-tertiary review-content">
+                                    <li><a href="/pinjaman/add_new">Tambah Pinjaman</a></li>
+                                </div>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>
