@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2021 at 05:09 PM
+-- Generation Time: Dec 07, 2021 at 08:30 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -45,7 +45,8 @@ CREATE TABLE `anggota` (
 INSERT INTO `anggota` (`no_anggota`, `nama`, `no_ktp`, `jenis_kelamin`, `tanggal_lahir`, `alamat`, `no_hp`, `email`) VALUES
 ('140810200013', 'Rihlan Lumenda Suherman', '3272010203042001', 'Laki-Laki', '2001-08-24', 'Sukabumi', '085799881234', 'rihlanrihlan24@gmail.com'),
 ('140810200025', 'Raihan Fadhlal Aziz', '3272010203042002', 'Laki-Laki', '2001-10-10', 'Bogor', '085799881235', 'raihanfadhlal@gmail.com'),
-('140810200039', 'Rifqy Kurnia Sudarman', '3272010203042003', 'Laki-Laki', '2001-11-11', 'Cirebon', '085799881236', 'rifqykurnia@gmail.com');
+('140810200039', 'Rifqy Kurnia Sudarman', '3272010203042003', 'Laki-Laki', '2001-11-11', 'Cirebon', '085799881236', 'rifqykurnia@gmail.com'),
+('140810200398', 'Coba', '32720302010027', 'Laki-Laki', '2021-12-07', 'Bandung', '085793831342', 'coba@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -56,18 +57,20 @@ INSERT INTO `anggota` (`no_anggota`, `nama`, `no_ktp`, `jenis_kelamin`, `tanggal
 CREATE TABLE `angsuran` (
   `no_angsuran` char(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `no_pinjaman` char(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tanggal_bayar` date NOT NULL,
+  `tanggal_bayar` date DEFAULT NULL,
   `cicilan` double NOT NULL,
-  `angsuran_ke` int(2) NOT NULL
+  `angsuran_ke` int(2) NOT NULL,
+  `status_angsuran` enum('Belum Bayar','Sudah Bayar','Sedang Diverifikasi','') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Belum Bayar'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `angsuran`
 --
 
-INSERT INTO `angsuran` (`no_angsuran`, `no_pinjaman`, `tanggal_bayar`, `cicilan`, `angsuran_ke`) VALUES
-('A200013001', 'P200013001', '2021-11-18', 4200000, 1),
-('A200039001', 'P200039001', '2021-11-18', 5000000, 1);
+INSERT INTO `angsuran` (`no_angsuran`, `no_pinjaman`, `tanggal_bayar`, `cicilan`, `angsuran_ke`, `status_angsuran`) VALUES
+('A0405002', 'P0405', '2021-12-07', 120000, 2, 'Sedang Diverifikasi'),
+('A200013001', 'P200013001', '2021-11-18', 4200000, 1, 'Belum Bayar'),
+('A200039001', 'P200039001', '2021-11-18', 5000000, 1, 'Belum Bayar');
 
 -- --------------------------------------------------------
 
@@ -104,7 +107,7 @@ CREATE TABLE `pinjaman` (
   `tanggal_pencairan` date NOT NULL,
   `lama_pinjaman` int(2) NOT NULL,
   `besar_pinjaman` double NOT NULL,
-  `status_pinjaman` enum('Diterima','Ditolak','Sedang Diverifikasi','') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Sedang Diverifikasi'
+  `status_pinjaman` enum('Diterima','Ditolak','Sedang Diverifikasi','Lunas') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Sedang Diverifikasi'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -112,6 +115,7 @@ CREATE TABLE `pinjaman` (
 --
 
 INSERT INTO `pinjaman` (`no_pinjaman`, `no_anggota`, `tanggal_pencairan`, `lama_pinjaman`, `besar_pinjaman`, `status_pinjaman`) VALUES
+('P0405', '140810200398', '2021-12-07', 24, 1000000, 'Diterima'),
 ('P200013001', '140810200013', '2021-10-18', 12, 50000000, 'Diterima'),
 ('P200025001', '140810200025', '2021-12-06', 6, 15000000, 'Sedang Diverifikasi'),
 ('P200039001', '140810200039', '2021-10-18', 12, 60000000, 'Sedang Diverifikasi');
@@ -129,7 +133,7 @@ CREATE TABLE `simpanan` (
   `profit` double NOT NULL,
   `tanggal_setor` date DEFAULT NULL,
   `jangka_waktu` int(2) NOT NULL,
-  `status_simpanan` enum('Belum Ditarik','Sudah Ditarik','','') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Belum Ditarik'
+  `status_simpanan` enum('Belum Ditarik','Sudah Ditarik','Sedang Diverifikasi','') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Belum Ditarik'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -137,6 +141,7 @@ CREATE TABLE `simpanan` (
 --
 
 INSERT INTO `simpanan` (`no_simpanan`, `no_anggota`, `besar_simpanan`, `profit`, `tanggal_setor`, `jangka_waktu`, `status_simpanan`) VALUES
+('S0699', '140810200398', 5000000, 500000, '2021-12-07', 12, 'Sudah Ditarik'),
 ('S200013001', '140810200013', 100000000, 10000000, NULL, 12, 'Belum Ditarik'),
 ('S200025001', '140810200025', 45000000, 4500000, NULL, 6, 'Belum Ditarik');
 
@@ -159,7 +164,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`email`, `password`, `level`, `foto_profil`) VALUES
 ('admin@gmail.com', '$2y$10$aHYlj4/l2EShb968XH.BcuLXk22cfJ7oXmU9yr7wCWJWlGm.B2WPi', 2, ''),
-('coba@gmail.com', '$2y$10$1EUJiKPyihBlLUJYiFPiu.w8.gYgstOJIncJaAhGhftfiq82uevoq', 1, ''),
+('coba@gmail.com', '', 1, '61af8df2e1896.png'),
 ('raihanfadhlal@gmail.com', '$2y$10$2tfA5K3BZSQv8Ih/aldhKuWHKhqodmP.piCl5nCo713MOTiJMpe5y', 1, ''),
 ('rifqykurnia@gmail.com', '$2y$10$nn/vFyafuDMy8P2q0HQZRuHekxR3aiHWqdN4xhDDN2aqEQTftUUBG', 1, ''),
 ('rihlanrihlan24@gmail.com', '$2y$10$xwgsktSOjVz8LurYIfa6M.5rrM99oFU12j.aixO2S9Zip5neidAPK', 1, '');
@@ -175,7 +180,7 @@ CREATE TABLE `v_besarpinjamangt` (
 ,`nama` varchar(50)
 ,`no_simpanan` char(10)
 ,`besar_simpanan` double
-,`status_simpanan` enum('Belum Ditarik','Sudah Ditarik','','')
+,`status_simpanan` enum('Belum Ditarik','Sudah Ditarik','Sedang Diverifikasi','')
 );
 
 -- --------------------------------------------------------
