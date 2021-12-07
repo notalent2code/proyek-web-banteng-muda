@@ -18,8 +18,10 @@
             <?php if(session()->get('level') === '1') : ?>
                 <!-- <li><a href="/">Home</a></li> -->
                 <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/iuran">Iuran</a></li>
                 <li><a href="/simpanan">Simpanan</a></li>
                 <li><a href="/pinjaman">Pinjaman</a></li>
+                <li><a href="/angsuran">Angsuran</a></li>
                 <li><a href="/profile">Profil</a></li>
                 <li><a href="/logout" class="btn" id="nav-btn">Logout</a></li>
             <?php elseif(session()->get('level') === '2') : ?>

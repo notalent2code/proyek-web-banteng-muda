@@ -10,13 +10,18 @@ class Dashboard extends BaseController
     public function index()
     {
         $model = new UserModel();
+        $model2 = new AnggotaModel();
         $email = session()->get('email');
         if(session()->get('level') === '2'){
             return view('pages/dashboard');
         }
         else if(session()->get('level') === '1'){
             $data['user'] = $model->getUser($email)->getRow();
-            if($data['user']->foto_profil === ''){
+            $data['anggota'] = $model2->where('email', $email)->first();
+            // $user = $model->where('email', $this->request->getVar('email'))->first();
+
+
+            if($data['anggota'] === null){
                 return redirect()->to('/anggota/add_new');
             }
         }
@@ -26,7 +31,9 @@ class Dashboard extends BaseController
     public function profile(){
         $email = session()->get('email');
         $model = new UserModel();
+        $model2 = new AnggotaModel();
         $data['user'] = $model->getUser($email)->getRow();
+        $data['anggota'] = $model2->getAnggotaEmail($email)->getRow();
         return view('pages/profile', $data);
     }
 
@@ -48,8 +55,8 @@ class Dashboard extends BaseController
         } else if(!in_array($fileExt, $allowedFileExt)){            
             $session->setFlashdata('error', 'Extensi File Salah !');
             $errorCheck = true;
-        } else if($sizeFile > 2000000){
-            $session->setFlashdata('error', 'File yang diupload lebih dari 2 MB !');
+        } else if($sizeFile > 5000000){
+            $session->setFlashdata('error', 'File yang diupload lebih dari 5 MB !');
             $errorCheck = true;
         }
         
