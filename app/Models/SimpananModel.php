@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Models;
-
 use CodeIgniter\Model;
 
 class SimpananModel extends Model
@@ -10,7 +8,7 @@ class SimpananModel extends Model
 
   public function getSimpanan($no_simpanan = false)
   {
-    if ($no_simpanan === false) {
+    if($no_simpanan === false){
       return $this->findAll();
     } else {
       return $this->getWhere(['no_simpanan' => $no_simpanan]);
@@ -19,7 +17,7 @@ class SimpananModel extends Model
 
   public function getSimpananAnggota($no_anggota = false)
   {
-    if ($no_anggota === false) {
+    if($no_anggota === false){
       return $this->findAll();
     } else {
       return $this->getWhere(['no_anggota' => $no_anggota]);

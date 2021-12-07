@@ -23,7 +23,7 @@ class Angsuran extends BaseController
             $noAnggota = $anggota->no_anggota;
             $data['pinjaman'] = $model2->getPinjamanAnggota($noAnggota)->getRow();
             $noPinjaman = $data['pinjaman']->no_pinjaman;
-            $data['angsuran'] = $model->getAngsuranPinjaman($noPinjaman)->getRow();
+            $data['angsuran'] = $model->getAngsuranPinjaman($noPinjaman)->getResultArray();
             if ($data['angsuran'] === null) {
                 return redirect()->to('/dashboard');
             }
