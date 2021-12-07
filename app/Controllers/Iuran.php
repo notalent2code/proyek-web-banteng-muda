@@ -11,7 +11,12 @@ class Iuran extends BaseController
     {
         $model = new IuranModel();
         $data['iuran'] = $model->getIuran();
-        return view('iuran/iuran', $data);
+        if (session()->get('level') === '2') {
+            return view('iuran/iuran', $data);
+        }
+        else {
+            return view('iuran/iuran2', $data);
+        }
     }
 
     public function add_new()
