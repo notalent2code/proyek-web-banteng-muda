@@ -74,11 +74,8 @@
                                         <td data-title="Status Angsuran"><?= $row['status_angsuran'] ?></td>
                                         <td><?php if ($row['status_angsuran'] === 'Belum Bayar') : ?>
                                                 <form action="/angsuran/update" method="post">
-                                                    <div class="text-field">
-                                                        <input type="text" name="no_angsuran" id="" value="<?= $row['no_angsuran'] ?>" hidden>
-                                                        <input type="text" name="status_angsuran" id="" value="Sedang Diverifikasi" hidden>
-                                                    </div>
-                                                    <input type="text" name="status_simpanan" id="" value='Sedang Diverifikasi' hidden>
+                                                    <input type="text" name="no_angsuran" id="" value="<?= $row['no_angsuran'] ?>" hidden>
+                                                    <input type="text" name="status_angsuran" id="" value="Sedang Diverifikasi" hidden>
                                                     <button type="submit" class="btn action-btn" style="margin: 0 0 0 3rem">Bayar</button>
                                                 </form>
                                             <?php endif ?>

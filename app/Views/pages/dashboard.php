@@ -7,15 +7,19 @@
         <div class="row">
             <div class="col">
                 <div>
-                    <div class="heading-tertiary u-mb-small">
+                    <div class="heading-primary u-mb-small">
                         <?php if (session()->get('level') === '2') : ?>
-                            Selamat datang, Admin ! <br>
                             <div class="heading-primary" align="center">
                                 <h1>Database Koperasi Simpan Pinjam Cooperativ</h1>
                             </div>
                         <?php else : ?>
                             Selamat datang, <?= $anggota->nama; ?> !
                         <?php endif; ?>
+                            <h6>
+                                Silakan gunakan layanan yang tersedia <br>
+                                pada Website ini
+
+                            </h6>
                     </div>
                     <?php if (session()->get('level') === '2') : ?>
                         <div class="row nav-ul" style="text-align: center;">

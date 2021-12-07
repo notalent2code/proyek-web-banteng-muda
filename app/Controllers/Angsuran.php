@@ -58,12 +58,11 @@ class Angsuran extends BaseController
             return view('angsuran/edit', $data);
         }
         return redirect()->to('angsuran');
-
     }
 
     public function update()
     {
-        if(session()->get('level') === '2'){
+        if (session()->get('level') === '2') {
             $model = new AngsuranModel();
             $no_angsuran = $this->request->getPost('no_angsuran');
             $data = array(
@@ -89,8 +88,10 @@ class Angsuran extends BaseController
 
     public function delete($no_angsuran)
     {
-        $model = new AngsuranModel();
-        $model->deleteAngsuran($no_angsuran);
-        return redirect()->to('/angsuran');
+        if (session()->get('level') === '2') {
+            $model = new AngsuranModel();
+            $model->deleteAngsuran($no_angsuran);
+            return redirect()->to('/angsuran');
+        }
     }
 }
