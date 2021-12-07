@@ -17,9 +17,7 @@ class Dashboard extends BaseController
         }
         else if(session()->get('level') === '1'){
             $data['user'] = $model->getUser($email)->getRow();
-            $data['anggota'] = $model2->where('email', $email)->first();
-            // $user = $model->where('email', $this->request->getVar('email'))->first();
-
+            $data['anggota'] = $model2->getAnggotaEmail($email)->getRow();
 
             if($data['anggota'] === null){
                 return redirect()->to('/anggota/add_new');
@@ -29,12 +27,15 @@ class Dashboard extends BaseController
     }
 
     public function profile(){
-        $email = session()->get('email');
-        $model = new UserModel();
-        $model2 = new AnggotaModel();
-        $data['user'] = $model->getUser($email)->getRow();
-        $data['anggota'] = $model2->getAnggotaEmail($email)->getRow();
-        return view('pages/profile', $data);
+        if(session()->get('level') === '1'){
+            $email = session()->get('email');
+            $model = new UserModel();
+            $model2 = new AnggotaModel();
+            $data['user'] = $model->getUser($email)->getRow();
+            $data['anggota'] = $model2->getAnggotaEmail($email)->getRow();
+            return view('pages/profile', $data);
+        }
+        return redirect()->to('/dashboard');
     }
 
     public function fotoProfil(){

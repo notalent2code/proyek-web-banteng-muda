@@ -15,6 +15,15 @@ class SimpananModel extends Model
     }
   }
 
+  public function getSimpananAnggota($no_anggota = false)
+  {
+    if($no_anggota === false){
+      return $this->findAll();
+    } else {
+      return $this->getWhere(['no_anggota' => $no_anggota]);
+    }
+  }
+
   public function saveSimpanan($data)
   {
     $query = $this->db->table($this->table)->insert($data);

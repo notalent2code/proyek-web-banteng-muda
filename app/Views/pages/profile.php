@@ -29,10 +29,6 @@
                 <table>
                     <thead>
                         <tr>
-                            <td>No Anggota</td>
-                            <td><?= $anggota->no_anggota; ?></td>
-                        </tr>
-                        <tr>
                         <td>Nama Lengkap</td>
                             <td><?= $anggota->nama; ?></td>
                         </tr>
@@ -55,7 +51,6 @@
                         <tr>
                         <td>No HP</td>
                             <td><?= $anggota->no_hp; ?></td>
-
                         </tr>
                         <tr>
                         <td>Email</td>

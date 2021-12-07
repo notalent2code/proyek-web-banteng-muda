@@ -45,6 +45,7 @@ class Pinjaman extends BaseController
             'tanggal_pencairan' => $this->request->getPost('tanggal_pencairan'),
             'lama_pinjaman' => $this->request->getPost('lama_pinjaman'),
             'besar_pinjaman' => $this->request->getPost('besar_pinjaman'),
+            'status_pinjaman' => $this->request->getPost('status_pinjaman')
           );
         $model->updatePinjaman($data, $no_pinjaman);
         return redirect()->to('/pinjaman');

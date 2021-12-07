@@ -8,14 +8,13 @@
             <div class="col">
                 <div>
                     <div class="heading-tertiary u-mb-small">
-                        Selamat datang, 
                         <?php if(session()->get('level') === '2') : ?>
-                            Admin ! <br>
+                            Selamat datang, Admin ! <br>
                             <div class="heading-primary" align="center">
                                 <h1>Database Koperasi Simpan Pinjam Cooperativ</h1>
                             </div>
                         <?php else : ?>
-                            <?= session()->get('email'); echo " !"; ?>
+                            Selamat datang, <?= $anggota->nama; ?> !
                         <?php endif; ?>
                     </div>
                     <?php if(session()->get('level') === '2') : ?>
@@ -50,6 +49,14 @@
                             <div class="col review-box">
                                 <div class="heading-tertiary review-content">
                                     <li><a href="/user">Data User</a></li>
+                                </div>
+                            </div>
+                        </div>
+                    <?php else : ?>
+                        <div class="row nav-ul" style="text-align: center;">
+                            <div class="col review-box">
+                                <div class="heading-tertiary review-content">
+                                    <li><a href="/simpanan/add_new">Tambah Simpanan</a></li>
                                 </div>
                             </div>
                         </div>

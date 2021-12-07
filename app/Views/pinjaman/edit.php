@@ -18,6 +18,16 @@
         <label for="tanggal_pencairan">Tanggal Pencairan</label>
         <input type="date" class="form-control" name="tanggal_pencairan" value="<?= $pinjaman->tanggal_pencairan; ?>"></p>
     </div>
+    <!-- <div class="text_field"><br> -->
+    <br>
+    <label for="status_pinjaman">Status Pinjaman</label>
+        <select name="status_pinjaman" id="">
+            <option value="Diterima">Diterima</option>
+            <option value="Ditolak">Ditolak</option>
+            <option value="Sedang Diverifikasi">Sedang Diverifikasi</option>
+        </select>
+        <br><br>
+    <!-- </div> -->
     <input type="hidden" name="no_pinjaman" value="<?= $pinjaman->no_pinjaman; ?>">
     <input type="hidden" name="no_anggota" value="<?= $pinjaman->no_anggota; ?>">
     

@@ -53,9 +53,6 @@
     </div>
       <div class="row">
         <div class="col">
-  
-
-        
           <form action="/anggota/save" name="form2" class="forms" method="post" >
             <input type="text" class="form-control" name="no_anggota" id="no_anggota" value="" hidden></p>
             <div class="text_field">
@@ -97,14 +94,7 @@
   <?php endif ?>
 
   <script>
-    function generateNoAnggota() {
-    let noAnggota = '14081020'
-    let n = Math.floor(Math.random() * 1000) + 1;
-    let tempNo = ('0000' + n).slice(-4);
-    let tempStr = noAnggota.concat(tempNo);
-    
-    document.getElementById('no_anggota').value = tempStr;
-    }
+
   </script>
 </div>
 <?= $this->endSection('content'); ?>

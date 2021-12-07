@@ -34,7 +34,7 @@
               </span>
               </div>
             </div>
-            <div class="pass">Forgot Password ?</div>
+            <!-- <div class="pass">Forgot Password ?</div> -->
             <input type="submit" value="Login" class="btn">
             <div class="signup_link">
                 Not a member ? <a href="/signup">Sign-up</a>

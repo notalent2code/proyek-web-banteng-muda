@@ -18,6 +18,13 @@
         <input type="text" class="form-control" name="jangka_waktu" value="<?= $simpanan->jangka_waktu; ?>"></p>
         <label for="jangka_waktu">Jangka Waktu (Bulan)</label>
     </div>
+    <br>
+    <label for="status_simpanan">Status Simpanan</label>
+        <select name="status_simpanan" id="">
+            <option value="Sudah Ditarik">Sudah Ditarik</option>
+            <option value="Belum Ditarik">Belum Ditarik</option>
+        </select>
+        <br><br>
     <input type="hidden" name="no_simpanan" value="<?= $simpanan->no_simpanan; ?>">
     <input type="hidden" name="no_anggota" value="<?= $simpanan->no_anggota; ?>">
     

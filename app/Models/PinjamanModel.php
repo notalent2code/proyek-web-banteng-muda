@@ -15,6 +15,15 @@ class PinjamanModel extends Model
     }
   }
 
+  public function getPinjamanAnggota($email = false)
+  {
+    if($email === false){
+      return $this->findAll();
+    } else {
+      return $this->getWhere(['email' => $email]);
+    }
+  }
+
   public function savePinjaman($data)
   {
     $query = $this->db->table($this->table)->insert($data);
