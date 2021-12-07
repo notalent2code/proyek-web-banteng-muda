@@ -54,6 +54,7 @@ class Simpanan extends BaseController
             $data['simpanan'] = $model->getSimpanan($no_simpanan)->getRow();
             return view('simpanan/edit', $data);
         }
+        return redirect()->to('simpanan');
     }
 
     public function update(){

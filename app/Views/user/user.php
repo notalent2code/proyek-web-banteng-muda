@@ -12,6 +12,7 @@
                     <tr>
                         <th>Email</th>
                         <th>Level</th>
+                        <th>Foto Profil</th>
                         <th colspan="2">Action</th>
                     </tr>
                 </thead>
@@ -20,6 +21,7 @@
                         <tr>
                             <td data-title="Email"><?= $row['email']; ?></td>
                             <td data-title="Level"><?= $row['level']; ?></td>
+                            <td data-title="Foto Profil"><?= $row['foto_profil']; ?></td>
                             <td data-title="Action"><a class="action-btn" href="/user/edit/<?= $row['email']; ?>">Edit</a></td>
                             <td data-title="Action"><a class="action-btn" href="/user/delete/<?= $row['email']; ?>" onclick="return confirm('Anda Yakin ? Semua Data Terkait User Ini Akan Terhapus')">Delete</a></td>
                         </tr>
