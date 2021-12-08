@@ -17,10 +17,8 @@
                             Selamat datang, <?= $anggota->nama; ?> !
                             </div>
                         <?php endif; ?>
-                            <h6>
-                                Silakan gunakan layanan yang tersedia <br>
-                                pada Website ini
-
+                            <h6 align="center">
+                                Silakan gunakan layanan yang tersedia pada Website ini
                             </h6>
                     </div>
                     <?php if (session()->get('level') === '2') : ?>
