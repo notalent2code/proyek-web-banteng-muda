@@ -14,7 +14,9 @@
                                 <h1>Database Koperasi Simpan Pinjam Cooperativ</h1>
                             </div>
                         <?php else : ?>
+                            <div align="center">
                             Selamat datang, <?= $anggota->nama; ?> !
+                            </div>
                         <?php endif; ?>
                     </div>
                     <?php if (session()->get('level') === '2') : ?>
@@ -56,17 +58,17 @@
                         <div class="row nav-ul" style="text-align: center;">
                             <div class="col review-box">
                                 <div class="heading-tertiary review-content">
-                                    <li><a href="/iuran/add_new">Tambah Iuran</a></li>
+                                    <li><a href="/iuran/add_new" class="btn" id="nav-btn">Tambah Iuran</a></li>
                                 </div>
                             </div>
                             <div class="col review-box">
                                 <div class="heading-tertiary review-content">
-                                    <li><a href="/pinjaman/add_new">Tambah Pinjaman</a></li>
+                                    <li><a href="/pinjaman/add_new" class="btn" id="nav-btn">Tambah Pinjaman</a></li>
                                 </div>
                             </div>
                             <div class="col review-box">
                                 <div class="heading-tertiary review-content">
-                                    <li><a href="/simpanan/add_new">Tambah Simpanan</a></li>
+                                    <li><a href="/simpanan/add_new" class="btn" id="nav-btn">Tambah Simpanan</a></li>
                                 </div>
                             </div>
                         </div>
