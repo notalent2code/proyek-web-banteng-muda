@@ -17,6 +17,15 @@ class IuranModel extends Model
     }
   }
 
+  public function getIuranAnggota($no_anggota = false)
+  {
+    if ($no_anggota === false) {
+      return $this->findAll();
+    } else {
+      return $this->getWhere(['no_anggota' => $no_anggota]);
+    }
+  }
+
   public function saveIuran($data)
   {
     $query = $this->db->table($this->table)->insert($data);
